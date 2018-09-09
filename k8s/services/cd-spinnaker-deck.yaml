@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    beta.cloud.google.com/backend-config: '{"ports": {"http":"config-default"}}'
+  creationTimestamp: 2018-08-03T07:32:07Z
+  labels:
+    app: cd-spinnaker
+    component: deck
+  name: cd-spinnaker-deck
+  namespace: default
+  resourceVersion: "3266778"
+  selfLink: /api/v1/namespaces/default/services/cd-spinnaker-deck
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: http
+    nodePort: 30811
+    port: 9000
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    app: cd-spinnaker
+    component: deck
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

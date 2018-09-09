@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tls-ingress-spinnaker
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: cicddemo-spinnaker-lb
+  labels:
+    app: sample-backend-spinnaker
+spec:
+  tls:
+  - secretName: spinnaker-tls
+    hosts:
+            - spinnaker.<your-domain-name>
+  backend:
+    serviceName: cd-spinnaker-deck
+    servicePort: http

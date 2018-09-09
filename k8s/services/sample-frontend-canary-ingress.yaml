@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tls-ingress-canary
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: cicddemo-canary-lb
+  labels:
+    app: sample-backend-canary
+spec:
+  tls:
+  - secretName: canary-tls
+    hosts:
+            - canary.<your-domain-name>
+  backend:
+    serviceName: sample-frontend-canary
+    servicePort: http

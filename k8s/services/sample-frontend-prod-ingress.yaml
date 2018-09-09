@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tls-ingress-prod
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: cicddemo-production-lb
+  labels:
+    app: sample-backend-prod
+spec:
+  tls:
+  - secretName: prod-tls
+    hosts:
+            - prod.<your-domain-name>
+  backend:
+    serviceName: sample-frontend-prod
+    servicePort: http
