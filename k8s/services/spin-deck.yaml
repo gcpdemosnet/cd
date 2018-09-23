@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    beta.cloud.google.com/backend-config: '{"ports": {"http":"config-default"}}'
+  creationTimestamp: 2018-08-03T07:32:07Z
+  labels:
+    app: spin
+    cluster: spin-deck
+  name: spin-deck
+  namespace: default
+  resourceVersion: "3266778"
+  selfLink: /api/v1/namespaces/default/services/spin-deck
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: http
+    nodePort: 30811
+    port: 9000
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    app: spin
+    cluster: spin-deck
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

@@ -8,9 +8,9 @@ metadata:
     app: sample-backend-canary
 spec:
   tls:
-  - secretName: canary-tls
+  - secretName: canary1-tls
     hosts:
-            - canary.<your-domain-name>
+            - canary1.gcpdemos.net
   backend:
     serviceName: sample-frontend-canary
     servicePort: http
