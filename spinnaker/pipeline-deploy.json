@@ -36,10 +36,10 @@
               "imageDescription": {
                 "account": "gcr",
                 "fromTrigger": true,
-                "imageId": "gcr.io/PROJECT/sample-app:v.*",
+                "imageId": "gcr.io/PROJECT/sample-app:v*",
                 "registry": "gcr.io",
                 "repository": "PROJECT/sample-app",
-                "tag": "v.*"
+                "tag": "v*"
               },
               "imagePullPolicy": "ALWAYS",
               "limits": {
@@ -141,10 +141,10 @@
               "imageDescription": {
                 "account": "gcr",
                 "fromTrigger": true,
-                "imageId": "gcr.io/PROJECT/sample-app:v.*",
+                "imageId": "gcr.io/PROJECT/sample-app:v*",
                 "registry": "gcr.io",
                 "repository": "PROJECT/sample-app",
-                "tag": "v.*"
+                "tag": "v*"
               },
               "imagePullPolicy": "ALWAYS",
               "limits": {
@@ -259,10 +259,10 @@
               "imageDescription": {
                 "account": "gcr",
                 "fromTrigger": true,
-                "imageId": "gcr.io/PROJECT/sample-app:v.*",
+                "imageId": "gcr.io/PROJECT/sample-app:v*",
                 "registry": "gcr.io",
                 "repository": "PROJECT/sample-app",
-                "tag": "v.*"
+                "tag": "v*"
               },
               "imagePullPolicy": "ALWAYS",
               "lifecycle": null,
@@ -366,10 +366,10 @@
               "imageDescription": {
                 "account": "gcr",
                 "fromTrigger": true,
-                "imageId": "gcr.io/PROJECT/sample-app:v.*",
+                "imageId": "gcr.io/PROJECT/sample-app:v*",
                 "registry": "gcr.io",
                 "repository": "PROJECT/sample-app",
-                "tag": "v.*"
+                "tag": "v*"
               },
               "imagePullPolicy": "ALWAYS",
               "lifecycle": null,
@@ -458,7 +458,7 @@
       "status": [
         "successful"
       ],
-      "tag": "v.*",
+      "tag": "v*",
       "type": "docker"
     }
   ],
